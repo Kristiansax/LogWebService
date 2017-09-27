@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LogReaderTests
+namespace LogReaderServiceTests
 {
     [TestClass]
-    public class LogReaderServiceTests
+    public class LogReaderTests
     {
         [TestMethod]
         public void TestMethod1()

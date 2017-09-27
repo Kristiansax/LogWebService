@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D288BF50-BD80-45D3-87C7-C9BF0CB448F2}</ProjectGuid>
+    <ProjectGuid>{6CCA3F4F-2B34-4DED-AE8A-880353E1932B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogReaderTests</RootNamespace>
-    <AssemblyName>LogReaderTests</AssemblyName>
+    <RootNamespace>LogReaderServiceTests</RootNamespace>
+    <AssemblyName>LogReaderServiceTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,7 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="LogReaderServiceTests.cs" />
+    <Compile Include="LogReaderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
