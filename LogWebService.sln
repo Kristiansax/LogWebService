@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogWebService", "LogWebService\LogWebService.csproj", "{3BA9701C-4F4D-44A3-AF25-4442C452E67F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogReaderService", "WcfService1\LogReaderService.csproj", "{1507493E-0BC6-4228-8F2D-E71F6F87DBBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3BA9701C-4F4D-44A3-AF25-4442C452E67F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BA9701C-4F4D-44A3-AF25-4442C452E67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BA9701C-4F4D-44A3-AF25-4442C452E67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BA9701C-4F4D-44A3-AF25-4442C452E67F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1507493E-0BC6-4228-8F2D-E71F6F87DBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1507493E-0BC6-4228-8F2D-E71F6F87DBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1507493E-0BC6-4228-8F2D-E71F6F87DBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1507493E-0BC6-4228-8F2D-E71F6F87DBBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
