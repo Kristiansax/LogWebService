@@ -4,36 +4,38 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.IO;
+using LogReaderService.DAL;
+using LogReaderService.Models;
 
 namespace LogReaderService.Controllers
 {
+
     public class LogController : ApiController
     {
-        // GET: api/Log
-        public IEnumerable<string> Get()
+        LogRepository logRep = new LogRepository();
+
+        [HttpGet]
+        [ActionName("something something darkside")]
+        public void GetDataFromLogFile(string filepath)
         {
-            return new string[] { "value1", "value2" };
+            filepath = Directory.GetCurrentDirectory();
+            string[] data = File.ReadAllLines(filepath + @"\data\logfil.txt");
+            
+
+            foreach (string item in data)
+            {
+                string[] seperatedItem = SeperateString(item);
+                Incident incident = new Incident(seperatedItem[0], seperatedItem[1], seperatedItem[2], seperatedItem[3], seperatedItem[4], seperatedItem[5], seperatedItem[6], seperatedItem[7], seperatedItem[8], seperatedItem[9], seperatedItem[10]);
+                logRep.incidents.Add(incident);
+
+            }
         }
 
-        // GET: api/Log/5
-        public string Get(int id)
+        public string[] SeperateString(string input)
         {
-            return "value";
-        }
-
-        // POST: api/Log
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT: api/Log/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Log/5
-        public void Delete(int id)
-        {
+            return input.Split('\t');
         }
     }
 }
+
