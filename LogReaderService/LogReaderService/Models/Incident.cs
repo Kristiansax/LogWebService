@@ -33,5 +33,9 @@ namespace LogReaderService.Models
             this.callTo = callTo;
             this.groupCall = groupCall;
         }
+        public Incident()
+        {
+
+        }
     }
 }

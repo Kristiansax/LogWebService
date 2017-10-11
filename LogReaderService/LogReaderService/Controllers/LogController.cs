@@ -7,34 +7,47 @@ using System.Web.Http;
 using System.IO;
 using LogReaderService.DAL;
 using LogReaderService.Models;
+using System.Web;
 
 namespace LogReaderService.Controllers
 {
-
     public class LogController : ApiController
     {
-        LogRepository logRep = new LogRepository();
+        public LogRepository logRep = new LogRepository();
 
         [HttpGet]
-        [ActionName("something something darkside")]
-        public void GetDataFromLogFile(string filepath)
+        [ActionName("GetLog")]
+        public List<Incident> GetAllFromLog ()
         {
-            filepath = Directory.GetCurrentDirectory();
-            string[] data = File.ReadAllLines(filepath + @"\data\logfil.txt");
-            
-
-            foreach (string item in data)
-            {
-                string[] seperatedItem = SeperateString(item);
-                Incident incident = new Incident(seperatedItem[0], seperatedItem[1], seperatedItem[2], seperatedItem[3], seperatedItem[4], seperatedItem[5], seperatedItem[6], seperatedItem[7], seperatedItem[8], seperatedItem[9], seperatedItem[10]);
-                logRep.incidents.Add(incident);
-
-            }
+            return logRep.GetDataFromLogFile();
         }
 
-        public string[] SeperateString(string input)
+        [HttpGet]
+        [ActionName("GetIncidentsByName")]
+        public List<Incident> GetNames (string name)
         {
-            return input.Split('\t');
+            return logRep.SearchLogByName(name);
+        }
+
+        [HttpPut]
+        [ActionName("PlaceholderName")]
+        public void Put()
+        {
+            //Skal kunne opdatere
+        }
+
+        [HttpPost]
+        [ActionName("PlaceholderName2")]
+        public void Post()
+        {
+            //Oprette en ny log
+        }
+
+        [HttpDelete]
+        [ActionName("PlaceholderName3")]
+        public void Delete()
+        {
+            //Slet en log/slet en linje fra loggen
         }
     }
 }
